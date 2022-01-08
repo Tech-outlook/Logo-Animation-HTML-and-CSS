@@ -14,56 +14,50 @@ body {
   align-items: center;
 }
 
-.bg-container{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
-    border-radius: 100%;
-    background: #1c1b29;
-    overflow: hidden;
+.bg-container {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  background: #1c1b29;
+  overflow: hidden;
+  cursor: pointer;
 }
-.bg-container::before{
-    content: "";
-    height: 150%;
-    width: 150%;
-    position: absolute;
-    top: -25%;
-    left: -25%;
-    background: conic-gradient(gold 20deg, transparent 120deg);
-    animation: rotate 8s infinite linear;
+.bg-container::before {
+  content: "";
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  top: -25%;
+  left: -25%;
+
+  animation: rotate 8s infinite linear;
 }
-@keyframes rotate{
-    50%{
-        transform: rotate(-360deg);
-    }
-}
-.bg-container::after{
-    content: "Tech outlook";
-    height: 94%;
-    width: 94%;
-    position: absolute;
-    background: #1c1b29;
-    border-radius: 100%;
-    top: 3%;
-    left: 3%;
-    color: white;
-    display: grid;
-    place-items: center;
-    letter-spacing: 1px;
-    font-size: 26px;
+@keyframes rotate {
+  50% {
+    transform: rotate(-360deg);
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.bg-container:hover::before {
+  background: conic-gradient(gold 20deg, transparent 120deg);
+}
+.bg-container::after {
+  content: "Tech outlook";
+  height: 94%;
+  width: 94%;
+  position: absolute;
+  background: #1c1b29;
+  border-radius: 100%;
+  top: 3%;
+  left: 3%;
+  color: white;
+  display: grid;
+  place-items: center;
+  letter-spacing: 1px;
+  font-size: 26px;
+}
+.bg-container:hover::after {
+  text-decoration: underline;
+}
